@@ -1,0 +1,373 @@
+\ProvidesPackage{switchkutotennomessage}[2022/09/02]
+\RequirePackage{ucharcat}
+\RequirePackage{newunicodechar}
+\kcatcode"3000=15
+\kcatcode"FF00=15
+\makeatletter
+\@namedef{u8:\detokenize{　}}{\Ucharcat 12288 18\afterchar}
+\@namedef{u8:\detokenize{、}}{\Ucharcat 12290 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 12290 18\afterchar}
+\@namedef{u8:\detokenize{〃}}{\Ucharcat 12291 18\afterchar}
+\@namedef{u8:\detokenize{〄}}{\Ucharcat 12292 18\afterchar}
+\@namedef{u8:\detokenize{々}}{\Ucharcat 12293 18\afterchar}
+\@namedef{u8:\detokenize{〆}}{\Ucharcat 12294 18\afterchar}
+\@namedef{u8:\detokenize{〇}}{\Ucharcat 12295 18\afterchar}
+\@namedef{u8:\detokenize{〈}}{\Ucharcat 12296 18\afterchar}
+\@namedef{u8:\detokenize{〉}}{\Ucharcat 12297 18\afterchar}
+\@namedef{u8:\detokenize{《}}{\Ucharcat 12298 18\afterchar}
+\@namedef{u8:\detokenize{》}}{\Ucharcat 12299 18\afterchar}
+\@namedef{u8:\detokenize{「}}{\Ucharcat 12300 18\afterchar}
+\@namedef{u8:\detokenize{」}}{\Ucharcat 12301 18\afterchar}
+\@namedef{u8:\detokenize{『}}{\Ucharcat 12302 18\afterchar}
+\@namedef{u8:\detokenize{』}}{\Ucharcat 12303 18\afterchar}
+\@namedef{u8:\detokenize{【}}{\Ucharcat 12304 18\afterchar}
+\@namedef{u8:\detokenize{】}}{\Ucharcat 12305 18\afterchar}
+\@namedef{u8:\detokenize{〒}}{\Ucharcat 12306 18\afterchar}
+\@namedef{u8:\detokenize{〓}}{\Ucharcat 12307 18\afterchar}
+\@namedef{u8:\detokenize{〔}}{\Ucharcat 12308 18\afterchar}
+\@namedef{u8:\detokenize{〕}}{\Ucharcat 12309 18\afterchar}
+\@namedef{u8:\detokenize{〖}}{\Ucharcat 12310 18\afterchar}
+\@namedef{u8:\detokenize{〗}}{\Ucharcat 12311 18\afterchar}
+\@namedef{u8:\detokenize{〘}}{\Ucharcat 12312 18\afterchar}
+\@namedef{u8:\detokenize{〙}}{\Ucharcat 12313 18\afterchar}
+\@namedef{u8:\detokenize{〚}}{\Ucharcat 12314 18\afterchar}
+\@namedef{u8:\detokenize{〛}}{\Ucharcat 12315 18\afterchar}
+\@namedef{u8:\detokenize{〜}}{\Ucharcat 12316 18\afterchar}
+\@namedef{u8:\detokenize{〝}}{\Ucharcat 12317 18\afterchar}
+\@namedef{u8:\detokenize{〞}}{\Ucharcat 12318 18\afterchar}
+\@namedef{u8:\detokenize{〟}}{\Ucharcat 12319 18\afterchar}
+\@namedef{u8:\detokenize{〠}}{\Ucharcat 12320 18\afterchar}
+\@namedef{u8:\detokenize{〡}}{\Ucharcat 12321 18\afterchar}
+\@namedef{u8:\detokenize{〢}}{\Ucharcat 12322 18\afterchar}
+\@namedef{u8:\detokenize{〣}}{\Ucharcat 12323 18\afterchar}
+\@namedef{u8:\detokenize{〤}}{\Ucharcat 12324 18\afterchar}
+\@namedef{u8:\detokenize{〥}}{\Ucharcat 12325 18\afterchar}
+\@namedef{u8:\detokenize{〦}}{\Ucharcat 12326 18\afterchar}
+\@namedef{u8:\detokenize{〧}}{\Ucharcat 12327 18\afterchar}
+\@namedef{u8:\detokenize{〨}}{\Ucharcat 12328 18\afterchar}
+\@namedef{u8:\detokenize{〩}}{\Ucharcat 12329 18\afterchar}
+% \@namedef{〪u8:\detokenize{}{}\Ucharcat 12330 18\afterchar}
+% \@namedef{〫u8:\detokenize{}{}\Ucharcat 12331 18\afterchar}
+% \@namedef{〬u8:\detokenize{}{}\Ucharcat 12332 18\afterchar}
+% \@namedef{〭u8:\detokenize{}{}\Ucharcat 12333 18\afterchar}
+% \@namedef{〮u8:\detokenize{}{}\Ucharcat 12334 18\afterchar}
+% \@namedef{〯u8:\detokenize{}{}\Ucharcat 12335 18\afterchar}
+\@namedef{u8:\detokenize{〰}}{\Ucharcat 12336 18\afterchar}
+\@namedef{u8:\detokenize{〱}}{\Ucharcat 12337 18\afterchar}
+\@namedef{u8:\detokenize{〲}}{\Ucharcat 12338 18\afterchar}
+\@namedef{u8:\detokenize{〳}}{\Ucharcat 12339 18\afterchar}
+\@namedef{u8:\detokenize{〴}}{\Ucharcat 12340 18\afterchar}
+\@namedef{u8:\detokenize{〵}}{\Ucharcat 12341 18\afterchar}
+\@namedef{u8:\detokenize{〶}}{\Ucharcat 12342 18\afterchar}
+\@namedef{u8:\detokenize{〷}}{\Ucharcat 12343 18\afterchar}
+\@namedef{u8:\detokenize{〸}}{\Ucharcat 12344 18\afterchar}
+\@namedef{u8:\detokenize{〹}}{\Ucharcat 12345 18\afterchar}
+\@namedef{u8:\detokenize{〺}}{\Ucharcat 12346 18\afterchar}
+\@namedef{u8:\detokenize{〻}}{\Ucharcat 12347 18\afterchar}
+\@namedef{u8:\detokenize{〼}}{\Ucharcat 12348 18\afterchar}
+\@namedef{u8:\detokenize{〽}}{\Ucharcat 12349 18\afterchar}
+\@namedef{u8:\detokenize{〾}}{\Ucharcat 12350 18\afterchar}
+\@namedef{u8:\detokenize{〿}}{\Ucharcat 12351 18\afterchar}
+
+
+\@namedef{u8:\detokenize{＀}}{\Ucharcat 65280 18\afterchar}
+\@namedef{u8:\detokenize{！}}{\Ucharcat 65281 18\afterchar}
+\@namedef{u8:\detokenize{＂}}{\Ucharcat 65282 18\afterchar}
+\@namedef{u8:\detokenize{＃}}{\Ucharcat 65283 18\afterchar}
+\@namedef{u8:\detokenize{＄}}{\Ucharcat 65284 18\afterchar}
+\@namedef{u8:\detokenize{％}}{\Ucharcat 65285 18\afterchar}
+\@namedef{u8:\detokenize{＆}}{\Ucharcat 65286 18\afterchar}
+\@namedef{u8:\detokenize{＇}}{\Ucharcat 65287 18\afterchar}
+\@namedef{u8:\detokenize{（}}{\Ucharcat 65288 18\afterchar}
+\@namedef{u8:\detokenize{）}}{\Ucharcat 65289 18\afterchar}
+\@namedef{u8:\detokenize{＊}}{\Ucharcat 65290 18\afterchar}
+\@namedef{u8:\detokenize{＋}}{\Ucharcat 65291 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{－}}{\Ucharcat 65293 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 65294 18\afterchar}
+\@namedef{u8:\detokenize{／}}{\Ucharcat 65295 18\afterchar}
+% \@namedef{u8:\detokenize{０}}{\Ucharcat 65296 18\afterchar}
+% \@namedef{u8:\detokenize{１}}{\Ucharcat 65297 18\afterchar}
+% \@namedef{u8:\detokenize{２}}{\Ucharcat 65298 18\afterchar}
+% \@namedef{u8:\detokenize{３}}{\Ucharcat 65299 18\afterchar}
+% \@namedef{u8:\detokenize{４}}{\Ucharcat 65300 18\afterchar}
+% \@namedef{u8:\detokenize{５}}{\Ucharcat 65301 18\afterchar}
+% \@namedef{u8:\detokenize{６}}{\Ucharcat 65302 18\afterchar}
+% \@namedef{u8:\detokenize{７}}{\Ucharcat 65303 18\afterchar}
+% \@namedef{u8:\detokenize{８}}{\Ucharcat 65304 18\afterchar}
+% \@namedef{u8:\detokenize{９}}{\Ucharcat 65305 18\afterchar}
+\@namedef{u8:\detokenize{：}}{\Ucharcat 65306 18\afterchar}
+\@namedef{u8:\detokenize{；}}{\Ucharcat 65307 18\afterchar}
+\@namedef{u8:\detokenize{＜}}{\Ucharcat 65308 18\afterchar}
+\@namedef{u8:\detokenize{＝}}{\Ucharcat 65309 18\afterchar}
+\@namedef{u8:\detokenize{＞}}{\Ucharcat 65310 18\afterchar}
+\@namedef{u8:\detokenize{？}}{\Ucharcat 65311 18\afterchar}
+% \@namedef{u8:\detokenize{＠}}{\Ucharcat 65312 18\afterchar}
+% \@namedef{u8:\detokenize{Ａ}}{\Ucharcat 65313 18\afterchar}
+% \@namedef{u8:\detokenize{Ｂ}}{\Ucharcat 65314 18\afterchar}
+% \@namedef{u8:\detokenize{Ｃ}}{\Ucharcat 65315 18\afterchar}
+% \@namedef{u8:\detokenize{Ｄ}}{\Ucharcat 65316 18\afterchar}
+% \@namedef{u8:\detokenize{Ｅ}}{\Ucharcat 65317 18\afterchar}
+% \@namedef{u8:\detokenize{Ｆ}}{\Ucharcat 65318 18\afterchar}
+% \@namedef{u8:\detokenize{Ｇ}}{\Ucharcat 65319 18\afterchar}
+% \@namedef{u8:\detokenize{Ｈ}}{\Ucharcat 65320 18\afterchar}
+% \@namedef{u8:\detokenize{Ｉ}}{\Ucharcat 65321 18\afterchar}
+% \@namedef{u8:\detokenize{Ｊ}}{\Ucharcat 65322 18\afterchar}
+% \@namedef{u8:\detokenize{Ｋ}}{\Ucharcat 65323 18\afterchar}
+% \@namedef{u8:\detokenize{Ｌ}}{\Ucharcat 65324 18\afterchar}
+% \@namedef{u8:\detokenize{Ｍ}}{\Ucharcat 65325 18\afterchar}
+% \@namedef{u8:\detokenize{Ｎ}}{\Ucharcat 65326 18\afterchar}
+% \@namedef{u8:\detokenize{Ｏ}}{\Ucharcat 65327 18\afterchar}
+% \@namedef{u8:\detokenize{Ｐ}}{\Ucharcat 65328 18\afterchar}
+% \@namedef{u8:\detokenize{Ｑ}}{\Ucharcat 65329 18\afterchar}
+% \@namedef{u8:\detokenize{Ｒ}}{\Ucharcat 65330 18\afterchar}
+% \@namedef{u8:\detokenize{Ｓ}}{\Ucharcat 65331 18\afterchar}
+% \@namedef{u8:\detokenize{Ｔ}}{\Ucharcat 65332 18\afterchar}
+% \@namedef{u8:\detokenize{Ｕ}}{\Ucharcat 65333 18\afterchar}
+% \@namedef{u8:\detokenize{Ｖ}}{\Ucharcat 65334 18\afterchar}
+% \@namedef{u8:\detokenize{Ｗ}}{\Ucharcat 65335 18\afterchar}
+% \@namedef{u8:\detokenize{Ｘ}}{\Ucharcat 65336 18\afterchar}
+% \@namedef{u8:\detokenize{Ｙ}}{\Ucharcat 65337 18\afterchar}
+% \@namedef{u8:\detokenize{Ｚ}}{\Ucharcat 65338 18\afterchar}
+\@namedef{u8:\detokenize{［}}{\Ucharcat 65339 18\afterchar}
+\@namedef{u8:\detokenize{＼}}{\Ucharcat 65340 18\afterchar}
+\@namedef{u8:\detokenize{］}}{\Ucharcat 65341 18\afterchar}
+\@namedef{u8:\detokenize{＾}}{\Ucharcat 65342 18\afterchar}
+\@namedef{u8:\detokenize{＿}}{\Ucharcat 65343 18\afterchar}
+\@namedef{u8:\detokenize{｀}}{\Ucharcat 65344 18\afterchar}
+% \@namedef{u8:\detokenize{ａ}}{\Ucharcat 65345 18\afterchar}
+% \@namedef{u8:\detokenize{ｂ}}{\Ucharcat 65346 18\afterchar}
+% \@namedef{u8:\detokenize{ｃ}}{\Ucharcat 65347 18\afterchar}
+% \@namedef{u8:\detokenize{ｄ}}{\Ucharcat 65348 18\afterchar}
+% \@namedef{u8:\detokenize{ｅ}}{\Ucharcat 65349 18\afterchar}
+% \@namedef{u8:\detokenize{ｆ}}{\Ucharcat 65350 18\afterchar}
+% \@namedef{u8:\detokenize{ｇ}}{\Ucharcat 65351 18\afterchar}
+% \@namedef{u8:\detokenize{ｈ}}{\Ucharcat 65352 18\afterchar}
+% \@namedef{u8:\detokenize{ｉ}}{\Ucharcat 65353 18\afterchar}
+% \@namedef{u8:\detokenize{ｊ}}{\Ucharcat 65354 18\afterchar}
+% \@namedef{u8:\detokenize{ｋ}}{\Ucharcat 65355 18\afterchar}
+% \@namedef{u8:\detokenize{ｌ}}{\Ucharcat 65356 18\afterchar}
+% \@namedef{u8:\detokenize{ｍ}}{\Ucharcat 65357 18\afterchar}
+% \@namedef{u8:\detokenize{ｎ}}{\Ucharcat 65358 18\afterchar}
+% \@namedef{u8:\detokenize{ｏ}}{\Ucharcat 65359 18\afterchar}
+% \@namedef{u8:\detokenize{ｐ}}{\Ucharcat 65360 18\afterchar}
+% \@namedef{u8:\detokenize{ｑ}}{\Ucharcat 65361 18\afterchar}
+% \@namedef{u8:\detokenize{ｒ}}{\Ucharcat 65362 18\afterchar}
+% \@namedef{u8:\detokenize{ｓ}}{\Ucharcat 65363 18\afterchar}
+% \@namedef{u8:\detokenize{ｔ}}{\Ucharcat 65364 18\afterchar}
+% \@namedef{u8:\detokenize{ｕ}}{\Ucharcat 65365 18\afterchar}
+% \@namedef{u8:\detokenize{ｖ}}{\Ucharcat 65366 18\afterchar}
+% \@namedef{u8:\detokenize{ｗ}}{\Ucharcat 65367 18\afterchar}
+% \@namedef{u8:\detokenize{ｘ}}{\Ucharcat 65368 18\afterchar}
+% \@namedef{u8:\detokenize{ｙ}}{\Ucharcat 65369 18\afterchar}
+% \@namedef{u8:\detokenize{ｚ}}{\Ucharcat 65370 18\afterchar}
+\@namedef{u8:\detokenize{｛}}{\Ucharcat 65371 18\afterchar}
+\@namedef{u8:\detokenize{｜}}{\Ucharcat 65372 18\afterchar}
+\@namedef{u8:\detokenize{｝}}{\Ucharcat 65373 18\afterchar}
+\@namedef{u8:\detokenize{～}}{\Ucharcat 65374 18\afterchar}
+\@namedef{u8:\detokenize{｟}}{\Ucharcat 65375 18\afterchar}
+\@namedef{u8:\detokenize{｠}}{\Ucharcat 65376 18\afterchar}
+\@namedef{u8:\detokenize{｡}}{\Ucharcat 65377 18\afterchar}
+\@namedef{u8:\detokenize{｢}}{\Ucharcat 65378 18\afterchar}
+\@namedef{u8:\detokenize{｣}}{\Ucharcat 65379 18\afterchar}
+\@namedef{u8:\detokenize{､}}{\Ucharcat 65380 18\afterchar}
+\@namedef{u8:\detokenize{･}}{\Ucharcat 65381 18\afterchar}
+% \@namedef{u8:\detokenize{ｦ}}{\Ucharcat 65382 18\afterchar}
+% \@namedef{u8:\detokenize{ｧ}}{\Ucharcat 65383 18\afterchar}
+% \@namedef{u8:\detokenize{ｨ}}{\Ucharcat 65384 18\afterchar}
+% \@namedef{u8:\detokenize{ｩ}}{\Ucharcat 65385 18\afterchar}
+% \@namedef{u8:\detokenize{ｪ}}{\Ucharcat 65386 18\afterchar}
+% \@namedef{u8:\detokenize{ｫ}}{\Ucharcat 65387 18\afterchar}
+% \@namedef{u8:\detokenize{ｬ}}{\Ucharcat 65388 18\afterchar}
+% \@namedef{u8:\detokenize{ｭ}}{\Ucharcat 65389 18\afterchar}
+% \@namedef{u8:\detokenize{ｮ}}{\Ucharcat 65390 18\afterchar}
+% \@namedef{u8:\detokenize{ｯ}}{\Ucharcat 65391 18\afterchar}
+% \@namedef{u8:\detokenize{ｰ}}{\Ucharcat 65392 18\afterchar}
+% \@namedef{u8:\detokenize{ｱ}}{\Ucharcat 65393 18\afterchar}
+% \@namedef{u8:\detokenize{ｲ}}{\Ucharcat 65394 18\afterchar}
+% \@namedef{u8:\detokenize{ｳ}}{\Ucharcat 65395 18\afterchar}
+% \@namedef{u8:\detokenize{ｴ}}{\Ucharcat 65396 18\afterchar}
+% \@namedef{u8:\detokenize{ｵ}}{\Ucharcat 65397 18\afterchar}
+% \@namedef{u8:\detokenize{ｶ}}{\Ucharcat 65398 18\afterchar}
+% \@namedef{u8:\detokenize{ｷ}}{\Ucharcat 65399 18\afterchar}
+% \@namedef{u8:\detokenize{ｸ}}{\Ucharcat 65400 18\afterchar}
+% \@namedef{u8:\detokenize{ｹ}}{\Ucharcat 65401 18\afterchar}
+% \@namedef{u8:\detokenize{ｺ}}{\Ucharcat 65402 18\afterchar}
+% \@namedef{u8:\detokenize{ｻ}}{\Ucharcat 65403 18\afterchar}
+% \@namedef{u8:\detokenize{ｼ}}{\Ucharcat 65404 18\afterchar}
+% \@namedef{u8:\detokenize{ｽ}}{\Ucharcat 65405 18\afterchar}
+% \@namedef{u8:\detokenize{ｾ}}{\Ucharcat 65406 18\afterchar}
+% \@namedef{u8:\detokenize{ｿ}}{\Ucharcat 65407 18\afterchar}
+% \@namedef{u8:\detokenize{ﾀ}}{\Ucharcat 65408 18\afterchar}
+% \@namedef{u8:\detokenize{ﾁ}}{\Ucharcat 65409 18\afterchar}
+% \@namedef{u8:\detokenize{ﾂ}}{\Ucharcat 65410 18\afterchar}
+% \@namedef{u8:\detokenize{ﾃ}}{\Ucharcat 65411 18\afterchar}
+% \@namedef{u8:\detokenize{ﾄ}}{\Ucharcat 65412 18\afterchar}
+% \@namedef{u8:\detokenize{ﾅ}}{\Ucharcat 65413 18\afterchar}
+% \@namedef{u8:\detokenize{ﾆ}}{\Ucharcat 65414 18\afterchar}
+% \@namedef{u8:\detokenize{ﾇ}}{\Ucharcat 65415 18\afterchar}
+% \@namedef{u8:\detokenize{ﾈ}}{\Ucharcat 65416 18\afterchar}
+% \@namedef{u8:\detokenize{ﾉ}}{\Ucharcat 65417 18\afterchar}
+% \@namedef{u8:\detokenize{ﾊ}}{\Ucharcat 65418 18\afterchar}
+% \@namedef{u8:\detokenize{ﾋ}}{\Ucharcat 65419 18\afterchar}
+% \@namedef{u8:\detokenize{ﾌ}}{\Ucharcat 65420 18\afterchar}
+% \@namedef{u8:\detokenize{ﾍ}}{\Ucharcat 65421 18\afterchar}
+% \@namedef{u8:\detokenize{ﾎ}}{\Ucharcat 65422 18\afterchar}
+% \@namedef{u8:\detokenize{ﾏ}}{\Ucharcat 65423 18\afterchar}
+% \@namedef{u8:\detokenize{ﾐ}}{\Ucharcat 65424 18\afterchar}
+% \@namedef{u8:\detokenize{ﾑ}}{\Ucharcat 65425 18\afterchar}
+% \@namedef{u8:\detokenize{ﾒ}}{\Ucharcat 65426 18\afterchar}
+% \@namedef{u8:\detokenize{ﾓ}}{\Ucharcat 65427 18\afterchar}
+% \@namedef{u8:\detokenize{ﾔ}}{\Ucharcat 65428 18\afterchar}
+% \@namedef{u8:\detokenize{ﾕ}}{\Ucharcat 65429 18\afterchar}
+% \@namedef{u8:\detokenize{ﾖ}}{\Ucharcat 65430 18\afterchar}
+% \@namedef{u8:\detokenize{ﾗ}}{\Ucharcat 65431 18\afterchar}
+% \@namedef{u8:\detokenize{ﾘ}}{\Ucharcat 65432 18\afterchar}
+% \@namedef{u8:\detokenize{ﾙ}}{\Ucharcat 65433 18\afterchar}
+% \@namedef{u8:\detokenize{ﾚ}}{\Ucharcat 65434 18\afterchar}
+% \@namedef{u8:\detokenize{ﾛ}}{\Ucharcat 65435 18\afterchar}
+% \@namedef{u8:\detokenize{ﾜ}}{\Ucharcat 65436 18\afterchar}
+% \@namedef{u8:\detokenize{ﾝ}}{\Ucharcat 65437 18\afterchar}
+% \@namedef{ﾞu8:\detokenize{}{}\Ucharcat 65438 18\afterchar}
+% \@namedef{ﾟu8:\detokenize{}{}\Ucharcat 65439 18\afterchar}
+\@namedef{u8:\detokenize{ﾠ}}{\Ucharcat 65440 18\afterchar}
+\@namedef{u8:\detokenize{ﾡ}}{\Ucharcat 65441 18\afterchar}
+\@namedef{u8:\detokenize{ﾢ}}{\Ucharcat 65442 18\afterchar}
+\@namedef{u8:\detokenize{ﾣ}}{\Ucharcat 65443 18\afterchar}
+\@namedef{u8:\detokenize{ﾤ}}{\Ucharcat 65444 18\afterchar}
+\@namedef{u8:\detokenize{ﾥ}}{\Ucharcat 65445 18\afterchar}
+\@namedef{u8:\detokenize{ﾦ}}{\Ucharcat 65446 18\afterchar}
+\@namedef{u8:\detokenize{ﾧ}}{\Ucharcat 65447 18\afterchar}
+\@namedef{u8:\detokenize{ﾨ}}{\Ucharcat 65448 18\afterchar}
+\@namedef{u8:\detokenize{ﾩ}}{\Ucharcat 65449 18\afterchar}
+\@namedef{u8:\detokenize{ﾪ}}{\Ucharcat 65450 18\afterchar}
+\@namedef{u8:\detokenize{ﾫ}}{\Ucharcat 65451 18\afterchar}
+\@namedef{u8:\detokenize{ﾬ}}{\Ucharcat 65452 18\afterchar}
+\@namedef{u8:\detokenize{ﾭ}}{\Ucharcat 65453 18\afterchar}
+\@namedef{u8:\detokenize{ﾮ}}{\Ucharcat 65454 18\afterchar}
+\@namedef{u8:\detokenize{ﾯ}}{\Ucharcat 65455 18\afterchar}
+\@namedef{u8:\detokenize{ﾰ}}{\Ucharcat 65456 18\afterchar}
+\@namedef{u8:\detokenize{ﾱ}}{\Ucharcat 65457 18\afterchar}
+\@namedef{u8:\detokenize{ﾲ}}{\Ucharcat 65458 18\afterchar}
+\@namedef{u8:\detokenize{ﾳ}}{\Ucharcat 65459 18\afterchar}
+\@namedef{u8:\detokenize{ﾴ}}{\Ucharcat 65460 18\afterchar}
+\@namedef{u8:\detokenize{ﾵ}}{\Ucharcat 65461 18\afterchar}
+\@namedef{u8:\detokenize{ﾶ}}{\Ucharcat 65462 18\afterchar}
+\@namedef{u8:\detokenize{ﾷ}}{\Ucharcat 65463 18\afterchar}
+\@namedef{u8:\detokenize{ﾸ}}{\Ucharcat 65464 18\afterchar}
+\@namedef{u8:\detokenize{ﾹ}}{\Ucharcat 65465 18\afterchar}
+\@namedef{u8:\detokenize{ﾺ}}{\Ucharcat 65466 18\afterchar}
+\@namedef{u8:\detokenize{ﾻ}}{\Ucharcat 65467 18\afterchar}
+\@namedef{u8:\detokenize{ﾼ}}{\Ucharcat 65468 18\afterchar}
+\@namedef{u8:\detokenize{ﾽ}}{\Ucharcat 65469 18\afterchar}
+\@namedef{u8:\detokenize{ﾾ}}{\Ucharcat 65470 18\afterchar}
+\@namedef{u8:\detokenize{﾿}}{\Ucharcat 65471 18\afterchar}
+\@namedef{u8:\detokenize{￀}}{\Ucharcat 65472 18\afterchar}
+\@namedef{u8:\detokenize{￁}}{\Ucharcat 65473 18\afterchar}
+\@namedef{u8:\detokenize{ￂ}}{\Ucharcat 65474 18\afterchar}
+\@namedef{u8:\detokenize{ￃ}}{\Ucharcat 65475 18\afterchar}
+\@namedef{u8:\detokenize{ￄ}}{\Ucharcat 65476 18\afterchar}
+\@namedef{u8:\detokenize{ￅ}}{\Ucharcat 65477 18\afterchar}
+\@namedef{u8:\detokenize{ￆ}}{\Ucharcat 65478 18\afterchar}
+\@namedef{u8:\detokenize{ￇ}}{\Ucharcat 65479 18\afterchar}
+\@namedef{u8:\detokenize{￈}}{\Ucharcat 65480 18\afterchar}
+\@namedef{u8:\detokenize{￉}}{\Ucharcat 65481 18\afterchar}
+\@namedef{u8:\detokenize{ￊ}}{\Ucharcat 65482 18\afterchar}
+\@namedef{u8:\detokenize{ￋ}}{\Ucharcat 65483 18\afterchar}
+\@namedef{u8:\detokenize{ￌ}}{\Ucharcat 65484 18\afterchar}
+\@namedef{u8:\detokenize{ￍ}}{\Ucharcat 65485 18\afterchar}
+\@namedef{u8:\detokenize{ￎ}}{\Ucharcat 65486 18\afterchar}
+\@namedef{u8:\detokenize{ￏ}}{\Ucharcat 65487 18\afterchar}
+\@namedef{u8:\detokenize{￐}}{\Ucharcat 65488 18\afterchar}
+\@namedef{u8:\detokenize{￑}}{\Ucharcat 65489 18\afterchar}
+\@namedef{u8:\detokenize{ￒ}}{\Ucharcat 65490 18\afterchar}
+\@namedef{u8:\detokenize{ￓ}}{\Ucharcat 65491 18\afterchar}
+\@namedef{u8:\detokenize{ￔ}}{\Ucharcat 65492 18\afterchar}
+\@namedef{u8:\detokenize{ￕ}}{\Ucharcat 65493 18\afterchar}
+\@namedef{u8:\detokenize{ￖ}}{\Ucharcat 65494 18\afterchar}
+\@namedef{u8:\detokenize{ￗ}}{\Ucharcat 65495 18\afterchar}
+\@namedef{u8:\detokenize{￘}}{\Ucharcat 65496 18\afterchar}
+\@namedef{u8:\detokenize{￙}}{\Ucharcat 65497 18\afterchar}
+\@namedef{u8:\detokenize{ￚ}}{\Ucharcat 65498 18\afterchar}
+\@namedef{u8:\detokenize{ￛ}}{\Ucharcat 65499 18\afterchar}
+\@namedef{u8:\detokenize{ￜ}}{\Ucharcat 65500 18\afterchar}
+\@namedef{u8:\detokenize{￝}}{\Ucharcat 65501 18\afterchar}
+\@namedef{u8:\detokenize{￞}}{\Ucharcat 65502 18\afterchar}
+\@namedef{u8:\detokenize{￟}}{\Ucharcat 65503 18\afterchar}
+\@namedef{u8:\detokenize{￠}}{\Ucharcat 65504 18\afterchar}
+\@namedef{u8:\detokenize{￡}}{\Ucharcat 65505 18\afterchar}
+\@namedef{u8:\detokenize{￢}}{\Ucharcat 65506 18\afterchar}
+\@namedef{u8:\detokenize{￣}}{\Ucharcat 65507 18\afterchar}
+\@namedef{u8:\detokenize{￤}}{\Ucharcat 65508 18\afterchar}
+\@namedef{u8:\detokenize{￥}}{\Ucharcat 65509 18\afterchar}
+\@namedef{u8:\detokenize{￦}}{\Ucharcat 65510 18\afterchar}
+\@namedef{u8:\detokenize{￧}}{\Ucharcat 65511 18\afterchar}
+\@namedef{u8:\detokenize{￨}}{\Ucharcat 65512 18\afterchar}
+\@namedef{u8:\detokenize{￩}}{\Ucharcat 65513 18\afterchar}
+\@namedef{u8:\detokenize{￪}}{\Ucharcat 65514 18\afterchar}
+\@namedef{u8:\detokenize{￫}}{\Ucharcat 65515 18\afterchar}
+\@namedef{u8:\detokenize{￬}}{\Ucharcat 65516 18\afterchar}
+\@namedef{u8:\detokenize{￭}}{\Ucharcat 65517 18\afterchar}
+\@namedef{u8:\detokenize{￮}}{\Ucharcat 65518 18\afterchar}
+\@namedef{u8:\detokenize{￯}}{\Ucharcat 65519 18\afterchar}
+% \@namedef{u8:\detokenize{￰}}{\Ucharcat 65520 18\afterchar}
+% \@namedef{u8:\detokenize{￱}}{\Ucharcat 65521 18\afterchar}
+% \@namedef{u8:\detokenize{￲}}{\Ucharcat 65522 18\afterchar}
+% \@namedef{u8:\detokenize{￳}}{\Ucharcat 65523 18\afterchar}
+% \@namedef{u8:\detokenize{￴}}{\Ucharcat 65524 18\afterchar}
+% \@namedef{u8:\detokenize{￵}}{\Ucharcat 65525 18\afterchar}
+% \@namedef{u8:\detokenize{￶}}{\Ucharcat 65526 18\afterchar}
+% \@namedef{u8:\detokenize{￷}}{\Ucharcat 65527 18\afterchar}
+% \@namedef{u8:\detokenize{￸}}{\Ucharcat 65528 18\afterchar}
+% \@namedef{u8:\detokenize{￹}}{\Ucharcat 65529 18\afterchar}
+% \@namedef{u8:\detokenize{￺}}{\Ucharcat 65530 18\afterchar}
+% \@namedef{u8:\detokenize{￻}}{\Ucharcat 65531 18\afterchar}
+% \@namedef{u8:\detokenize{￼}}{\Ucharcat 65532 18\afterchar}
+% \@namedef{u8:\detokenize{�}}{\Ucharcat 65533 18\afterchar}
+% \@namedef{u8:\detokenize{￾}}{\Ucharcat 65534 18\afterchar}
+% \@namedef{u8:\detokenize{￿}}{\Ucharcat 65535 18\afterchar}
+
+
+%句読点のオプション
+\DeclareOption{cp}{
+\@namedef{u8:\detokenize{、}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 65294 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 65294 18\afterchar}
+}
+\DeclareOption{cmaru}{
+\@namedef{u8:\detokenize{、}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 12290 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 12290 18\afterchar}
+}
+\DeclareOption{tenmaru}{
+\@namedef{u8:\detokenize{、}}{\Ucharcat 12289 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 12290 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 12289 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 12290 18\afterchar}
+}
+\DeclareOption{tenp}{
+\@namedef{u8:\detokenize{、}}{\Ucharcat 12289 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 65294 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 12289 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 65294 18\afterchar}
+}
+\DeclareOption{nothing}{
+\@namedef{u8:\detokenize{、}}{\Ucharcat 12289 18\afterchar}
+\@namedef{u8:\detokenize{。}}{\Ucharcat 12290 18\afterchar}
+\@namedef{u8:\detokenize{，}}{\Ucharcat 65292 18\afterchar}
+\@namedef{u8:\detokenize{．}}{\Ucharcat 65294 18\afterchar}
+}
+\DeclareOption{empty}{
+\def\afterchar{}
+}
+\DeclareOption{forcezenkaku}{
+\def\afterchar{\ignorespaces}
+}
+\DeclareOption{space}{
+\def\afterchar{ }
+}
+\ExecuteOptions{nothing,empty}
+\ProcessOptions\relax
+\makeatother
